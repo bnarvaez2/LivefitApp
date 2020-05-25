@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/lblIMC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/su_imc_es"
+        android:textColor="@color/colorNegro"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/lblPeso"
+        app:layout_constraintTop_toBottomOf="@+id/lblPeso" />
+
+    <TextView
+        android:id="@+id/lblCategoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/su_categoria"
+        android:textColor="@color/colorNegro"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/lblIMC"
+        app:layout_constraintTop_toBottomOf="@+id/lblIMC" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="60dp"
+        android:background="@color/gris"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+<!--
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/lblBajoPesoM"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="@string/bajo_pesoM"
+                android:textAlignment="center"
+                android:textColor="@color/colorNegro" />
+
+            <TextView
+                android:id="@+id/lblNormalM"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="@string/normalM"
+                android:textAlignment="center"
+                android:textColor="@color/colorNegro" />
+
+            <TextView
+                android:id="@+id/lblSobrePesoM"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="@string/sobrepesoM"
+                android:textAlignment="center"
+                android:textColor="@color/colorNegro" />
+
+            <TextView
+                android:id="@+id/lblObesoM"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="@string/obesoM"
+                android:textAlignment="center"
+                android:textColor="@color/colorNegro" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/lblBajoPeso"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="@string/bajo_peso"
+                android:textAlignment="center"
+                android:textColor="@color/colorNegro" />
+
+            <TextView
+                android:id="@+id/lblNormal"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="@string/normal"
+                android:textAlignment="center"
+                android:textColor="@color/colorNegro" />
+
+            <TextView
+                android:id="@+id/lblSobrePeso"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="@string/sobrepeso"
+                android:textAlignment="center"
+                android:textColor="@color/colorNegro" />
+
+            <TextView
+                android:id="@+id/lblObeso"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="@string/obeso"
+                android:textAlignment="center"
+                android:textColor="@color/colorNegro" />
+        </TableRow>
+
+    </TableLayout>
+-->
+    <TextView
+        android:id="@+id/lblResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/resultado"
+        android:textColor="@color/colorNegro"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblAltura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/su_altura"
+        android:textColor="@color/colorNegro"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout2" />
+
+    <TextView
+        android:id="@+id/lblPeso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/su_peso"
+        android:textColor="@color/colorNegro"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/lblAltura"
+        app:layout_constraintTop_toBottomOf="@+id/lblAltura" />
+
+    <TableLayout
+        android:id="@+id/tableLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/encabezadoCategoria"
+                    android:layout_width="105dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/categoria"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorNegro"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/lblBajoPeso"
+                    android:layout_width="105dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bajo_peso"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorNegro"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/lblNormal"
+                    android:layout_width="105dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/normal"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorNegro"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/lblSobrePeso"
+                    android:layout_width="105dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sobrepeso"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorNegro"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/lblObeso"
+                    android:layout_width="105dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/obeso"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorNegro"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/encabezadoIMC"
+                    android:layout_width="105dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/imc"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorNegro"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/lblBajoPesoM"
+                    android:layout_width="105dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bajo_pesoM"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorNegro"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/lblNormalM"
+                    android:layout_width="105dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/normalM"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorNegro"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/lblSobrePesoM"
+                    android:layout_width="105dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sobrepesoM"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorNegro"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/lblObesoM"
+                    android:layout_width="105dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/obesoM"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorNegro"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </TableRow>
+
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

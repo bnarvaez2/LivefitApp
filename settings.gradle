@@ -1,0 +1,2 @@
+rootProject.name='LivefitApp'
+include ':app'

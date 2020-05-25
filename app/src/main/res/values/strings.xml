@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">LivefitApp</string>
+    <string name="livefitapp">LivefitApp</string>
+    <string name="calcular">Calcular</string>
+    <string name="historial">Historial</string>
+    <string name="recomendaciones">Recomendaciones</string>
+    <string name="altura_m">Altura (m)</string>
+    <string name="peso_kg">Peso (Kg)</string>
+    <string name="desarrollado_por_braa_company">Desarrollado por BRAA-company</string>
+    <string name="su_imc_es">IMC:</string>
+    <string name="imc">IMC</string>
+    <string name="categoria">Categoria</string>
+    <string name="su_categoria">Categoria:</string>
+    <string name="su_altura">Altura:</string>
+    <string name="su_peso">Peso:</string>
+
+    <string name="sobrepeso">Sobrepeso</string>
+    <string name="bajo_peso">Bajo peso</string>
+    <string name="obeso">Obeso</string>
+    <string name="normal">Normal</string>
+    <string name="sobrepesoM">25.0—29.9</string>
+    <string name="bajo_pesoM"> menor a 18.5"</string>
+    <string name="obesoM"> mayor a 29.9</string>
+    <string name="normalM">18.5—24.9</string>
+    <string name="resultado">Resultado</string>
+</resources>
