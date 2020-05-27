@@ -69,6 +69,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="@string/historial"
+        android:onClick="verHistorial"
         app:layout_constraintEnd_toEndOf="@+id/btnCalcular"
         app:layout_constraintStart_toStartOf="@+id/btnCalcular"
         app:layout_constraintTop_toBottomOf="@+id/btnCalcular" />
@@ -84,7 +85,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnHistorial" />
 
     <TextView
-        android:id="@+id/lblAltura"
+        android:id="@+id/hAltura"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -97,14 +98,14 @@
         app:layout_constraintTop_toTopOf="@+id/txtAltura" />
 
     <TextView
-        android:id="@+id/lblPeso"
+        android:id="@+id/hPeso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/peso_kg"
         android:textColor="@color/colorNegro"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/txtPeso"
-        app:layout_constraintStart_toStartOf="@+id/lblAltura"
+        app:layout_constraintStart_toStartOf="@+id/hAltura"
         app:layout_constraintTop_toTopOf="@+id/txtPeso" />
 
     <TextView
@@ -117,4 +118,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/signOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="SignOut"
+        android:textColor="@color/colorNegro"
+        app:layout_constraintBottom_toTopOf="@+id/txtLivefitApp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtLivefitApp"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

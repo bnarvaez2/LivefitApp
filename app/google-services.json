@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "733868191052",
+    "firebase_url": "https://livefitapp-0001.firebaseio.com/",
+    "project_id": "livefitapp-0001",
+    "storage_bucket": "livefitapp-0001.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733868191052:android:b5c73ef0d389980cf9f3e9",
+        "android_client_info": {
+          "package_name": "com.example.livefitapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "733868191052-joo9kpsr5ua93p97t0jkqa24kp0usuud.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.livefitapp",
+            "certificate_hash": "9bc67dd182a800286f2deb0df3794ea16ee46c1c"
+          }
+        },
+        {
+          "client_id": "733868191052-mh87phrkm6r07n98euejmhnaoi1skjl9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVWKFOSET5t6rs262jejrERIOAooVpP3k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "733868191052-mh87phrkm6r07n98euejmhnaoi1skjl9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

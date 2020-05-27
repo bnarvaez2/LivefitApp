@@ -23,4 +23,10 @@
     <string name="obesoM"> mayor a 29.9</string>
     <string name="normalM">18.5—24.9</string>
     <string name="resultado">Resultado</string>
+    <string name="dia">dia</string>
+    <string name="mes">mes</string>
+    <string name="a_o">año</string>
+    <string name="email">Email</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="example_example">example@example</string>
 </resources>
