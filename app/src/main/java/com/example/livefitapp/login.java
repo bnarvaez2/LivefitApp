@@ -20,9 +20,12 @@ import com.google.firebase.database.FirebaseDatabase;
 public class login extends AppCompatActivity {
 
     String email;
+    String password;
     Boolean x;
-    private EditText editText;
+    private EditText txtEmail;
+    private EditText txtPassword;
     private Button button;
+    private Button btnRegistrarse;
 
     public static final String EXTRA_EMAIL = "com.example.android.LivefitApp.extra.EMAIL";
 
@@ -38,53 +41,34 @@ public class login extends AppCompatActivity {
         user = FirebaseDatabase.getInstance().getReference();
 
 
-        editText = findViewById(R.id.txtEmail);
+        txtEmail = findViewById(R.id.txtEmail);
+        txtPassword = findViewById(R.id.txtPassword);
         button = findViewById(R.id.btnINgresar);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                email = editText.getText().toString();
+                email = txtEmail.getText().toString();
+                password = txtPassword.getText().toString();
                 ingresar();
             }
         });
     }
 
-    private boolean registrar(){
-        x = false;
-        if(!email.isEmpty()) {
-            mAuth.createUserWithEmailAndPassword(email, email).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+    private void ingresar() {
+        if (!email.isEmpty() && !password.isEmpty()) {
+            mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
-                    if(task.isSuccessful()){
-                        String id = mAuth.getCurrentUser().getUid();
-                        user.child("register").child(id);
-                        Toast.makeText(getApplicationContext(),"Ha sido registrado.",Toast.LENGTH_SHORT).show();
-                        x = true;
+                    if (task.isSuccessful()) {
+                        Intent intent = new Intent(login.this, MainActivity.class);
+                        intent.putExtra(login.EXTRA_EMAIL, email + "");
+                        startActivity(intent);
+                        finish();
                     }
                 }
             });
         }
-        return x;
     }
-
-    private void ingresar(){
-        if(registrar() == true || registrar() == false){
-            if(!email.isEmpty()){
-                mAuth.signInWithEmailAndPassword(email,email).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            Intent intent = new Intent(login.this,MainActivity.class);
-                            intent.putExtra(login.EXTRA_EMAIL, email + "");
-                            startActivity(intent);
-                            finish();
-                        }
-                    }
-                });
-            }
-        }
-    }
-
     @Override
     protected void onStart() {
         super.onStart();
@@ -95,5 +79,10 @@ public class login extends AppCompatActivity {
             startActivity(intent);
             finish();
         }
+    }
+
+    public void ir_a_signup(View view) {
+        Intent intent = new Intent(this,Signup.class);
+        startActivity(intent);
     }
 }

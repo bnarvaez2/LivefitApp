@@ -34,7 +34,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Intent intent = getIntent();
 
-        user = intent.getStringExtra(login.EXTRA_EMAIL);
+
+        if(!login.EXTRA_EMAIL.isEmpty()){
+            user = intent.getStringExtra(login.EXTRA_EMAIL);
+        }
+        if(!Signup.EXTRA_EMAIL.isEmpty()){
+            user = intent.getStringExtra(Signup.EXTRA_EMAIL);
+        }
         mAuth = FirebaseAuth.getInstance();
 
         Toast.makeText(this, "Email: "+user, Toast.LENGTH_SHORT).show();

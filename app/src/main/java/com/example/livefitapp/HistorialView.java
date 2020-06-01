@@ -53,14 +53,16 @@ public class HistorialView extends AppCompatActivity {
                     Historial registro;
                     for (DataSnapshot ds: dataSnapshot.getChildren()){
                         registro = new Historial();
-                        registro.setDia(ds.child("dia").getValue().toString());
-                        registro.setMes(ds.child("mes").getValue().toString());
-                        registro.setAño(ds.child("año").getValue().toString());
-                        registro.setAltura("Altura: "+ ds.child("altura").getValue().toString() + " metros");
-                        registro.setPeso("Peso: "+ds.child("peso").getValue().toString() + " kg");
-                        registro.setImc("IMC: "+ ds.child("imc").getValue().toString());
-                        registro.setCategoria("Categoria: "+ ds.child("categoria").getValue().toString());
-                        listaRegistro.add(registro);
+                        if(ds.child("dia").exists()){
+                            registro.setDia(ds.child("dia").getValue().toString());
+                            registro.setMes(ds.child("mes").getValue().toString());
+                            registro.setAño(ds.child("año").getValue().toString());
+                            registro.setAltura("Altura: "+ ds.child("altura").getValue().toString() + " metros");
+                            registro.setPeso("Peso: "+ds.child("peso").getValue().toString() + " kg");
+                            registro.setImc("IMC: "+ ds.child("imc").getValue().toString());
+                            registro.setCategoria("Categoria: "+ ds.child("categoria").getValue().toString());
+                            listaRegistro.add(registro);
+                        }
                     }
                 }
 
