@@ -7,7 +7,7 @@
     <string name="altura_m">Altura (m)</string>
     <string name="peso_kg">Peso (Kg)</string>
     <string name="desarrollado_por_braa_company">Desarrollado por BRAA-company</string>
-    <string name="su_imc_es">IMC:</string>
+    <string name="su_imc_es">IMC</string>
     <string name="imc">IMC</string>
     <string name="categoria">Categoria</string>
     <string name="su_categoria">Categoria:</string>
@@ -22,17 +22,36 @@
     <string name="bajo_pesoM"> menor a 18.5"</string>
     <string name="obesoM"> mayor a 29.9</string>
     <string name="normalM">18.5—24.9</string>
+
     <string name="resultado">Resultado</string>
     <string name="dia">dia</string>
     <string name="mes">mes</string>
     <string name="a_o">año</string>
     <string name="email">Email</string>
     <string name="ingresar">Ingresar</string>
-    <string name="example_example">example@example</string>
+    <string name="Ingrese_su_email_example">Ingrese su email (Example@example)</string>
     <string name="contrase_a">Contraseña</string>
     <string name="registrarse">Registrarse</string>
     <string name="nombre">Nombre</string>
     <string name="ingrese_su_nombre">Ingrese su nombre</string>
-    <string name="ingrese_su_email">Ingrese su Email</string>
+    <string name="ingrese_su_email">Ingrese su email</string>
     <string name="ingrese_su_contrase_a">Ingrese su contraseña</string>
+    <string name="Bienvenido">Bienvenido!</string>
+    <string name="enjoy">Disfruta nuestra \napp</string>
+
+    <string name="Terminos_Seguridad">By tapping \'\'Continue\'\', you agree to our <u>Terms of Service. \n Privacy Polity</u>, and Cookie Polity.</string>
+    <string name="ey_continua_con_el_registro">Ey! Continua con el registro</string>
+    <string name="logo">logo</string>
+    <string name="signout">signOut</string>
+    <string name="digite_altura">Digite su altura</string>
+    <string name="digite_peso">Digite su peso</string>
+    <string name="brocolilogo">brocolilogo</string>
+    <string name="ahora_es_el_momento_perfecto_para_ponerse_en_forma">¡Ahora es el momento perfecto para ponerse en forma!</string>
+    <string name="metros">metros</string>
+    <string name="kg">kg</string>
+    <string name="descripcion">descripcion</string>
+    <string name="imagen">imagen</string>
+    <string name="ver">Ver</string>
+    <string name="volver">volver</string>
+
 </resources>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,20 +8,76 @@
     tools:context=".HistorialView">
 
     <TextView
-        android:id="@+id/lblHistorial"
+        android:id="@+id/lblResultado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="15dp"
         android:text="@string/historial"
         android:textAlignment="center"
         android:textColor="@color/colorNegro"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:textSize="25sp"
+        android:textStyle="normal"
         app:layout_constraintBottom_toTopOf="@+id/divider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_above="@+id/view"
+        android:layout_below="@+id/divider"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:background="@color/colorGray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lblUsuarioActual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/view"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:fontFamily="@font/roboto_light"
+        android:text="@string/desarrollado_por_braa_company"
+        android:textAlignment="center"
+        android:textColor="@color/grisClaro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="30dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:background="@color/invisible"
+        android:contentDescription="@string/volver"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="fitCenter"
+        android:tint="@color/colorNegro"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back" />
 
     <View
         android:id="@+id/divider"
@@ -30,7 +86,6 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="0dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="2dp"
         android:background="@color/gris"
@@ -38,210 +93,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ListView
-        android:id="@+id/listView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/divider"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider" />
-
-
-    <!--
-        <ScrollView
-            android:id="@+id/scrollView"
-            android:layout_width="409dp"
-            android:layout_height="668dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/divider">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/contenedorHistorial"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/gris">
-
-                <TextView
-                    android:id="@+id/hDia"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="30dp"
-                    android:layout_marginTop="30dp"
-                    android:text="@string/dia"
-                    android:textColor="@color/colorNegro"
-                    android:textSize="24sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/hMes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/mes"
-                    android:textColor="@color/colorNegro"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="@+id/hDia"
-                    app:layout_constraintStart_toStartOf="@+id/hDia"
-                    app:layout_constraintTop_toBottomOf="@+id/hDia" />
-
-                <TextView
-                    android:id="@+id/hAnio"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/a_o"
-                    android:textColor="@color/colorNegro"
-                    app:layout_constraintEnd_toEndOf="@+id/hMes"
-                    app:layout_constraintStart_toStartOf="@+id/hMes"
-                    app:layout_constraintTop_toBottomOf="@+id/hMes" />
-
-                <TextView
-                    android:id="@+id/hAltura"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:text="@string/altura_m"
-                    android:textColor="@color/colorNegro"
-                    app:layout_constraintBottom_toBottomOf="@+id/hDia"
-                    app:layout_constraintStart_toEndOf="@+id/hDia"
-                    app:layout_constraintTop_toTopOf="@+id/hDia" />
-
-                <TextView
-                    android:id="@+id/hPeso"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/peso_kg"
-                    android:textColor="@color/colorNegro"
-                    app:layout_constraintEnd_toEndOf="@+id/hAltura"
-                    app:layout_constraintStart_toStartOf="@+id/hAltura"
-                    app:layout_constraintTop_toBottomOf="@+id/hAltura" />
-
-                <TextView
-                    android:id="@+id/hIMC"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/imc"
-                    android:textColor="@color/colorNegro"
-                    app:layout_constraintEnd_toEndOf="@+id/hPeso"
-                    app:layout_constraintStart_toStartOf="@+id/hPeso"
-                    app:layout_constraintTop_toBottomOf="@+id/hPeso" />
-
-                <TextView
-                    android:id="@+id/hCategoria"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:text="@string/categoria"
-                    android:textColor="@color/colorNegro"
-                    app:layout_constraintBottom_toTopOf="@+id/hPeso"
-                    app:layout_constraintStart_toEndOf="@+id/hAltura"
-                    app:layout_constraintTop_toTopOf="@+id/hAltura" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </ScrollView>-->
-
-    <!--<ScrollView
-        android:layout_width="409dp"
-        android:layout_height="668dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider"
-        app:layout_constraintVertical_bias="1.0">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <TextView
-                android:id="@+id/hDia"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="30dp"
-                android:text="@string/dia"
-                android:textColor="@color/colorNegro"
-                android:textSize="24sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/hMes"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/mes"
-                android:textColor="@color/colorNegro"
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="@+id/hDia"
-                app:layout_constraintStart_toStartOf="@+id/hDia"
-                app:layout_constraintTop_toBottomOf="@+id/hDia" />
-
-            <TextView
-                android:id="@+id/hAnio"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/a_o"
-                android:textColor="@color/colorNegro"
-                app:layout_constraintEnd_toEndOf="@+id/hMes"
-                app:layout_constraintStart_toStartOf="@+id/hMes"
-                app:layout_constraintTop_toBottomOf="@+id/hMes" />
-
-            <TextView
-                android:id="@+id/hAltura"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:text="@string/altura_m"
-                android:textColor="@color/colorNegro"
-                app:layout_constraintBottom_toBottomOf="@+id/hDia"
-                app:layout_constraintStart_toEndOf="@+id/hDia"
-                app:layout_constraintTop_toTopOf="@+id/hDia" />
-
-            <TextView
-                android:id="@+id/hPeso"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/peso_kg"
-                android:textColor="@color/colorNegro"
-                app:layout_constraintEnd_toEndOf="@+id/hAltura"
-                app:layout_constraintStart_toStartOf="@+id/hAltura"
-                app:layout_constraintTop_toBottomOf="@+id/hAltura" />
-
-            <TextView
-                android:id="@+id/hIMC"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/imc"
-                android:textColor="@color/colorNegro"
-                app:layout_constraintEnd_toEndOf="@+id/hPeso"
-                app:layout_constraintStart_toStartOf="@+id/hPeso"
-                app:layout_constraintTop_toBottomOf="@+id/hPeso" />
-
-            <TextView
-                android:id="@+id/hCategoria"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:text="@string/categoria"
-                android:textColor="@color/colorNegro"
-                app:layout_constraintBottom_toTopOf="@+id/hPeso"
-                app:layout_constraintStart_toEndOf="@+id/hAltura"
-                app:layout_constraintTop_toTopOf="@+id/hAltura" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    </ScrollView>-->
-
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

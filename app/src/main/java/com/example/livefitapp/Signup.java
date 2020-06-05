@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,6 +33,8 @@ public class Signup extends AppCompatActivity {
     private FirebaseAuth mAuth;
     DatabaseReference user;
 
+    private ImageButton imageButtonBack;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +53,14 @@ public class Signup extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 registrarse();
+            }
+        });
+
+        imageButtonBack = findViewById(R.id.btnBack);
+        imageButtonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
             }
         });
     }

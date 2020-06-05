@@ -12,24 +12,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/roboto_medium"
         android:text="@string/email"
         android:textColor="@color/colorNegro"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="@dimen/tamaño_texto_terciario"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/txtEnjoy" />
 
     <EditText
         android:id="@+id/txtEmail"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/alto_edit_text"
+        android:layout_marginTop="3dp"
         android:layout_marginEnd="30dp"
-        android:backgroundTint="@color/colorNegro"
-        android:ems="10"
-        android:hint="@string/example_example"
+        android:background="@drawable/bordes_redondos_edit_text"
+        android:drawableEnd="@drawable/userlogo"
+        android:fontFamily="@font/roboto_light"
+        android:gravity="center"
+        android:hint="@string/ingrese_su_email"
         android:importantForAutofill="no"
         android:inputType="textEmailAddress"
         android:textColor="@color/colorNegro"
+        android:textColorHighlight="@color/colorAzulCian"
         android:textColorHint="@color/grisClaro"
+        android:textSize="@dimen/tamaño_letra_ediText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/lblEmail"
         app:layout_constraintTop_toBottomOf="@+id/lblEmail" />
@@ -37,45 +44,114 @@
     <Button
         android:id="@+id/btnINgresar"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/alto_edit_text"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bordes_redondos"
+        android:backgroundTint="@color/colorVerdeLogo"
         android:text="@string/ingresar"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/tamaño_texto_terciario"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintEnd_toEndOf="@+id/txtEmail"
         app:layout_constraintStart_toStartOf="@+id/txtEmail"
-        app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
 
     <TextView
         android:id="@+id/lblContraseña"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto_medium"
         android:text="@string/contrase_a"
         android:textColor="@color/colorNegro"
+        android:textSize="@dimen/tamaño_texto_terciario"
         app:layout_constraintStart_toStartOf="@+id/lblEmail"
         app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
 
     <EditText
         android:id="@+id/txtPassword"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/colorNegro"
-        android:ems="10"
-        android:hint="@string/contrase_a"
+        android:layout_height="@dimen/alto_edit_text"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/bordes_redondos_edit_text"
+        android:drawableEnd="@drawable/logolock24x24"
+        android:fontFamily="@font/roboto_light"
+        android:gravity="center"
+        android:hint="@string/ingrese_su_contrase_a"
+        android:importantForAutofill="no"
         android:inputType="textPassword"
-        android:textColorHint="@color/grisClaro"
+        android:textColor="@color/colorNegro"
+        android:textColorHint="@color/colorGray"
+        android:textSize="@dimen/tamaño_letra_ediText"
         app:layout_constraintEnd_toEndOf="@+id/txtEmail"
-        app:layout_constraintStart_toStartOf="@+id/lblContraseña"
-        app:layout_constraintTop_toBottomOf="@+id/lblContraseña"
-        android:importantForAutofill="no" />
+        app:layout_constraintStart_toStartOf="@+id/txtEmail"
+        app:layout_constraintTop_toBottomOf="@+id/lblContraseña" />
 
     <Button
         android:id="@+id/btnRegistrarse"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/registrarse"
+        android:layout_height="@dimen/alto_edit_text"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bordes_redondos"
+        android:backgroundTint="@color/colorAzulCian"
         android:onClick="ir_a_signup"
+        android:text="@string/registrarse"
+        android:textSize="@dimen/tamaño_texto_terciario"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintEnd_toEndOf="@+id/btnINgresar"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btnINgresar"
         app:layout_constraintTop_toBottomOf="@+id/btnINgresar" />
+
+    <TextView
+        android:id="@+id/txtBienvenido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/becca_perrye"
+        android:text="@string/Bienvenido"
+        android:textColor="@color/colorNegro"
+        android:textSize="@dimen/tamaño_texto_principal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtEnjoy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/becca_perrye"
+        android:text="@string/enjoy"
+        android:textColor="@color/colorNegro"
+        android:textSize="@dimen/tamaño_texto_secundario"
+        app:layout_constraintStart_toStartOf="@+id/txtBienvenido"
+        app:layout_constraintTop_toBottomOf="@+id/txtBienvenido" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="50dp"
+        android:background="@color/colorGray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:gravity="center"
+        android:text="@string/Terminos_Seguridad"
+        android:textColor="@color/colorGray"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

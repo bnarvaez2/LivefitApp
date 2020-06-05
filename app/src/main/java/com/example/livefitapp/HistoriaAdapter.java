@@ -7,9 +7,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.ArrayList;
 
 public class HistoriaAdapter extends BaseAdapter {
@@ -46,7 +43,7 @@ public class HistoriaAdapter extends BaseAdapter {
         TextView textViewAnio = convertView.findViewById(R.id.hAnio);
         TextView textViewPeso = convertView.findViewById(R.id.hAltura);
         TextView textViewAltura = convertView.findViewById(R.id.hPeso);
-        TextView textViewIMC = convertView.findViewById(R.id.hIMC);
+        TextView textViewIMC = convertView.findViewById(R.id.resultado);
         TextView textViewCategoria = convertView.findViewById(R.id.hCategoria);
 
         textViewDia.setText(registro.getDia());

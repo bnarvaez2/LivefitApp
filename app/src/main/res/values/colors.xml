@@ -6,8 +6,13 @@
     <color name="colorNegro">#000000</color>
     <color name="colorEvenbrite">#f05439</color>
     <color name="colorFB">#3B5998</color>
+    <color name="colorGray">#BDBDBD</color>
     <color name="colorAzulLight">#2196F3</color>
     <color name="hintColor">#BCBCBC</color>
+    <color name="colorAzulCian">#29B6F6</color>
     <color name="gris">#4A4A4A</color>
     <color name="grisClaro">#A6A6A6</color>
+    <color name="colorVerde">#9CCC65</color>
+    <color name="colorVerdeLogo">#FF23B14D</color>
+    <color name="invisible">#00FFFFFF</color>
 </resources>

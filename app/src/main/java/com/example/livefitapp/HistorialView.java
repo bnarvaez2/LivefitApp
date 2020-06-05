@@ -9,8 +9,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -28,9 +30,12 @@ public class HistorialView extends AppCompatActivity {
 
     private DatabaseReference database;
     private ArrayList<Historial> listaRegistro = new ArrayList<>();
+
     private ListView lsItems;
     private HistoriaAdapter adaptador;
     public Context context = this;
+    private TextView usuarioActual;
+    private ImageButton imageButtonBack;
     String user = "";
 
     @Override
@@ -39,6 +44,17 @@ public class HistorialView extends AppCompatActivity {
         setContentView(R.layout.activity_historial_view);
         Intent intent = getIntent();
         user= intent.getStringExtra(MainActivity.EXTRA_USER);
+
+        usuarioActual = findViewById(R.id.lblUsuarioActual);
+        usuarioActual.setText(user);
+
+        imageButtonBack = findViewById(R.id.btnBack);
+        imageButtonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         database = FirebaseDatabase.getInstance().getReference();
         getRegistros();
@@ -60,11 +76,12 @@ public class HistorialView extends AppCompatActivity {
                             registro.setAltura("Altura: "+ ds.child("altura").getValue().toString() + " metros");
                             registro.setPeso("Peso: "+ds.child("peso").getValue().toString() + " kg");
                             registro.setImc("IMC: "+ ds.child("imc").getValue().toString());
-                            registro.setCategoria("Categoria: "+ ds.child("categoria").getValue().toString());
+                            registro.setCategoria(ds.child("categoria").getValue().toString());
                             listaRegistro.add(registro);
                         }
                     }
                 }
+
 
                 lsItems = findViewById(R.id.listView);
                 adaptador = new HistoriaAdapter(context,listaRegistro);

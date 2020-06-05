@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="ancho_edit_text">350dp</dimen>
+    <dimen name="alto_edit_text">40dp</dimen>
+    <dimen name="tamaño_letra_ediText">18sp</dimen>
+
+    <dimen name="tamaño_texto_principal">70sp</dimen>
+    <dimen name="tamaño_texto_secundario">40sp</dimen>
+    <dimen name="tamaño_texto_signUp">30sp</dimen>
+    <dimen name="tamaño_texto_terciario">16sp</dimen>
+    <dimen name="tamaño_texto_cuaternario">18sp</dimen>
+
+
+</resources>

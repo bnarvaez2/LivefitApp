@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal">
+
         <!--app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,37 +20,44 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="30dp"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/hDia"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/dia"
+                android:textAlignment="center"
+                android:fontFamily="@font/roboto_medium"
                 android:textColor="@color/colorNegro"
-                android:textSize="24sp"
+                android:textSize="@dimen/tamaño_texto_signUp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/hMes"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/mes"
+                android:textAlignment="center"
                 android:textColor="@color/colorNegro"
-                android:textSize="16sp"
+                android:textSize="@dimen/tamaño_texto_cuaternario"
+                android:fontFamily="@font/roboto_light"
                 app:layout_constraintEnd_toEndOf="@+id/hDia"
                 app:layout_constraintStart_toStartOf="@+id/hDia"
                 app:layout_constraintTop_toBottomOf="@+id/hDia" />
 
             <TextView
                 android:id="@+id/hAnio"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/a_o"
+                android:textAlignment="center"
                 android:textColor="@color/colorNegro"
+                android:textSize="@dimen/tamaño_texto_terciario"
+                android:fontFamily="@font/roboto_light"
                 app:layout_constraintEnd_toEndOf="@+id/hMes"
                 app:layout_constraintStart_toStartOf="@+id/hMes"
                 app:layout_constraintTop_toBottomOf="@+id/hMes" />
@@ -61,36 +69,13 @@
             android:layout_marginStart="10dp"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/hAltura"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:text="@string/altura_m"
-                android:textColor="@color/colorNegro"
-                app:layout_constraintBottom_toBottomOf="@+id/hDia"
-                app:layout_constraintStart_toEndOf="@+id/hDia"
-                app:layout_constraintTop_toTopOf="@+id/hDia" />
-
-            <TextView
-                android:id="@+id/hPeso"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/peso_kg"
-                android:textColor="@color/colorNegro"
-                app:layout_constraintEnd_toEndOf="@+id/hAltura"
-                app:layout_constraintStart_toStartOf="@+id/hAltura"
-                app:layout_constraintTop_toBottomOf="@+id/hAltura" />
-
-            <TextView
-                android:id="@+id/hIMC"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/imc"
-                android:textColor="@color/colorNegro"
-                app:layout_constraintEnd_toEndOf="@+id/hPeso"
-                app:layout_constraintStart_toStartOf="@+id/hPeso"
-                app:layout_constraintTop_toBottomOf="@+id/hPeso" />
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="2dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorVerdeLogo" />
         </LinearLayout>
 
         <LinearLayout
@@ -103,12 +88,54 @@
                 android:id="@+id/hCategoria"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_medium"
                 android:text="@string/categoria"
                 android:textColor="@color/colorNegro"
+                android:textSize="@dimen/tamaño_texto_terciario"
                 app:layout_constraintBottom_toTopOf="@+id/hPeso"
                 app:layout_constraintStart_toEndOf="@+id/hAltura"
                 app:layout_constraintTop_toTopOf="@+id/hAltura" />
+
+            <TextView
+                android:id="@+id/hAltura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_light"
+                android:layout_marginTop="0dp"
+                android:text="@string/altura_m"
+                android:textColor="@color/colorNegro"
+                android:textSize="@dimen/tamaño_texto_terciario"
+                app:layout_constraintBottom_toBottomOf="@+id/hDia"
+                app:layout_constraintStart_toEndOf="@+id/hDia"
+                app:layout_constraintTop_toTopOf="@+id/hDia" />
+
+            <TextView
+                android:id="@+id/hPeso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/peso_kg"
+                android:textColor="@color/colorNegro"
+                android:fontFamily="@font/roboto_light"
+                android:textSize="@dimen/tamaño_texto_terciario"
+                app:layout_constraintEnd_toEndOf="@+id/hAltura"
+                app:layout_constraintStart_toStartOf="@+id/hAltura"
+                app:layout_constraintTop_toBottomOf="@+id/hAltura" />
+
+            <TextView
+                android:id="@+id/resultado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/roboto_light"
+                android:text="@string/imc"
+                android:textColor="@color/colorNegro"
+                android:textSize="@dimen/tamaño_texto_terciario"
+                app:layout_constraintEnd_toEndOf="@+id/hPeso"
+                app:layout_constraintStart_toStartOf="@+id/hPeso"
+                app:layout_constraintTop_toBottomOf="@+id/hPeso" />
+
         </LinearLayout>
+
     </LinearLayout>
 </LinearLayout>

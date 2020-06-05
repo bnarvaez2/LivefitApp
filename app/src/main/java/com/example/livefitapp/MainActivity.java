@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText vPltura;
     private EditText vPeso;
     private TextView signOut;
+    private TextView usuarioActual;
     String user;
 
     FirebaseAuth mAuth;
@@ -43,9 +44,10 @@ public class MainActivity extends AppCompatActivity {
         }
         mAuth = FirebaseAuth.getInstance();
 
-        Toast.makeText(this, "Email: "+user, Toast.LENGTH_SHORT).show();
+        usuarioActual = findViewById(R.id.lblUsuarioActual);
         vPltura = findViewById(R.id.txtAltura);
         vPeso = findViewById(R.id.txtPeso);
+        usuarioActual.setText(user);
         signOut = findViewById(R.id.signOut);
         signOut.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,6 +82,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void verHistorial(View view) {
         Intent intent = new Intent(this, HistorialView.class);
+        intent.putExtra(EXTRA_USER, user + "");
+        startActivity(intent);
+    }
+
+    public void verRecomendaciones(View view) {
+        Intent intent = new Intent(this, recomendacion_view.class);
         intent.putExtra(EXTRA_USER, user + "");
         startActivity(intent);
     }
