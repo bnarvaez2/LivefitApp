@@ -53,5 +53,9 @@
     <string name="imagen">imagen</string>
     <string name="ver">Ver</string>
     <string name="volver">volver</string>
+    <string name="bajar_de_peso">Bajar de peso</string>
+    <string name="subir_de_peso">Subir de peso</string>
+    <string name="saludable">Saludable</string>
+    <string name="recomendacion">Recomendacion</string>
 
 </resources>

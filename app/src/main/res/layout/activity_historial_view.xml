@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@drawable/fondo"
     tools:context=".HistorialView">
 
     <TextView
@@ -30,6 +30,7 @@
         android:layout_below="@+id/divider"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
+        android:divider="@color/colorPrimary"
         app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,7 +59,7 @@
         android:fontFamily="@font/roboto_light"
         android:text="@string/desarrollado_por_braa_company"
         android:textAlignment="center"
-        android:textColor="@color/grisClaro"
+        android:textColor="@color/gris"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

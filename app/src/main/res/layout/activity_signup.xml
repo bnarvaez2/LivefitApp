@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@drawable/fondo"
     tools:context=".Signup">
 
     <ImageButton
@@ -28,11 +28,11 @@
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginTop="230dp"
-        android:fontFamily="@font/becca_perrye"
+        android:fontFamily="@font/roboto_medium"
         android:gravity="center"
         android:text="@string/ey_continua_con_el_registro"
         android:textColor="@color/colorNegro"
-        android:textSize="@dimen/tamaño_texto_signUp"
+        android:textSize="@dimen/tamaño_texto_quintrio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -141,10 +141,10 @@
         android:layout_marginTop="40dp"
         android:background="@drawable/bordes_redondos"
         android:backgroundTint="@color/colorVerdeLogo"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
         android:text="@string/registrarse"
         android:textAllCaps="true"
         android:textSize="@dimen/tamaño_texto_terciario"
-        android:foreground="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintEnd_toEndOf="@+id/txtPassword"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="@+id/txtPassword"

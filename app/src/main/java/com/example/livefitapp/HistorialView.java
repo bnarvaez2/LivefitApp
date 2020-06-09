@@ -2,21 +2,14 @@ package com.example.livefitapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Adapter;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -84,7 +77,7 @@ public class HistorialView extends AppCompatActivity {
 
 
                 lsItems = findViewById(R.id.listView);
-                adaptador = new HistoriaAdapter(context,listaRegistro);
+                adaptador = new HistoriaAdapter(context,ordenarList(listaRegistro));
                 lsItems.setAdapter(adaptador);
             }
             @Override
@@ -92,5 +85,15 @@ public class HistorialView extends AppCompatActivity {
 
             }
         });
+    }
+
+    public ArrayList<Historial> ordenarList(ArrayList<Historial> lista){
+        ArrayList<Historial> lst = new ArrayList<>();
+        int i=lista.size()-1;
+        while(i>=0){
+            lst.add(lista.get(i));
+            i--;
+        }
+        return lst;
     }
 }

@@ -84,6 +84,12 @@ public class Signup extends AppCompatActivity {
                         startActivity(intent);
                         Toast.makeText(getApplicationContext(),"Registro exitoso",Toast.LENGTH_SHORT).show();
                         finish();
+                    }else{
+                        if(correo.contains(" ")){
+                            Toast.makeText(getApplicationContext(),"No se permiten espacios en el correo.",Toast.LENGTH_SHORT).show();
+                        }else{
+                            Toast.makeText(getApplicationContext(),"Este correo no está disponible.",Toast.LENGTH_SHORT).show();
+                        }
                     }
                 }
             });

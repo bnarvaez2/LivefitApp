@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,6 +24,7 @@ public class login extends AppCompatActivity {
     String email;
     String password;
     Boolean x;
+
     private EditText txtEmail;
     private EditText txtPassword;
     private Button button;
@@ -64,9 +67,13 @@ public class login extends AppCompatActivity {
                         intent.putExtra(login.EXTRA_EMAIL, email + "");
                         startActivity(intent);
                         finish();
+                    }else{
+                        Toast.makeText(getApplicationContext(), "Correo o contraseña incorrecta.", Toast.LENGTH_SHORT).show();
                     }
                 }
             });
+        }else {
+            Toast.makeText(getApplicationContext(), "Llene todos los capos.", Toast.LENGTH_SHORT).show();
         }
     }
     @Override

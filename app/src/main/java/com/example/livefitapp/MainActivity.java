@@ -2,6 +2,7 @@ package com.example.livefitapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText vPeso;
     private TextView signOut;
     private TextView usuarioActual;
+    private ConstraintLayout constraintLayout;
     String user;
 
     FirebaseAuth mAuth;
@@ -35,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Intent intent = getIntent();
 
+        constraintLayout = findViewById(R.id.mainLayout);
+        constraintLayout.setBackground(getResources().getDrawable(R.drawable.fondo));
 
         if(!login.EXTRA_EMAIL.isEmpty()){
             user = intent.getStringExtra(login.EXTRA_EMAIL);
