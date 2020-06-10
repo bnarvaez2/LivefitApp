@@ -75,12 +75,14 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra(EXTRA_ALTURA, altura + "");
                 intent.putExtra(EXTRA_PESO, peso + "");
                 intent.putExtra(EXTRA_USER, user + "");
+                vPltura.setText("");
+                vPeso.setText("");
                 startActivity(intent);
             } else {
-                Toast.makeText(getApplicationContext(), getResources().getString(R.string.ingrese_una_altura), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), getResources().getString(R.string.ingrese_un_peso), Toast.LENGTH_SHORT).show();
             }
         } else {
-            Toast.makeText(getApplicationContext(), getResources().getString(R.string.ingrese_un_peso), Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), getResources().getString(R.string.ingrese_una_altura), Toast.LENGTH_SHORT).show();
         }
     }
 
