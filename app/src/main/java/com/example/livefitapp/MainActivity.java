@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView signOut;
     private TextView usuarioActual;
     private ConstraintLayout constraintLayout;
-    String user;
+    public static String user;
 
     FirebaseAuth mAuth;
 
@@ -77,10 +77,10 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra(EXTRA_USER, user + "");
                 startActivity(intent);
             } else {
-                Toast.makeText(getApplicationContext(), "Ingrese un peso.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), getResources().getString(R.string.ingrese_una_altura), Toast.LENGTH_SHORT).show();
             }
         } else {
-            Toast.makeText(getApplicationContext(), "Ingrese una altura.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), getResources().getString(R.string.ingrese_un_peso), Toast.LENGTH_SHORT).show();
         }
     }
 

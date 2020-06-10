@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -33,7 +32,6 @@ public class Resultado extends AppCompatActivity {
     public static final String EXTRA_IMG = "com.example.android.LivefitApp.extra.IMG";
 
     private TextView textViewDescripcion;
-    private TextView textViewNombre;
     private ImageView imageView;
     private ImageButton imageButtonBack;
     private Button button;
@@ -61,15 +59,15 @@ public class Resultado extends AppCompatActivity {
         IMC = Double.parseDouble(message);
 
         if(IMC < 18.5){
-            ctgr = "Bajo peso";
+            ctgr = getResources().getString(R.string.bajo_peso);
         }else{
             if(IMC < 24.9){
-                ctgr = "Normal";
+                ctgr = getResources().getString(R.string.normal);
             }else{
                 if(IMC < 29.9){
-                    ctgr = "Sobrepeso";
+                    ctgr = getResources().getString(R.string.sobrepeso);
                 }else{
-                    ctgr = "Obeso";
+                    ctgr = getResources().getString(R.string.obeso);
                 }
             }
         }
@@ -103,10 +101,10 @@ public class Resultado extends AppCompatActivity {
         imageView = findViewById(R.id.imgRecomendacionR);
         button = findViewById(R.id.btnVerR);
 
-        if(ctgr.equals("Bajo peso")){
+        if(ctgr.equals(getResources().getString(R.string.bajo_peso))){
             getRecomendacion("subirDePeso");
         }else{
-            if(ctgr.equals("Normal")){
+            if(ctgr.equals(getResources().getString(R.string.normal))){
                 getRecomendacion("saludable");
             }else{
                 getRecomendacion("bajarDePeso");
@@ -167,6 +165,12 @@ public class Resultado extends AppCompatActivity {
         String  annio = Integer.toString(c.get(Calendar.YEAR));
         Historial registro = new Historial(annio, dia,mes,altura,peso,format.format(IMC)+"",ctgr);
         historial.child("register").child(email.replace('.','|')).child(id).setValue(registro);
+    }
+
+    public void verHistorial(View view) {
+        Intent intent = new Intent(this, HistorialView.class);
+        intent.putExtra(MainActivity.EXTRA_USER,MainActivity.user);
+        startActivity(intent);
     }
 
 }

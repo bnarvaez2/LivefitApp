@@ -66,9 +66,9 @@ public class HistorialView extends AppCompatActivity {
                             registro.setDia(ds.child("dia").getValue().toString());
                             registro.setMes(ds.child("mes").getValue().toString());
                             registro.setAño(ds.child("año").getValue().toString());
-                            registro.setAltura("Altura: "+ ds.child("altura").getValue().toString() + " metros");
-                            registro.setPeso("Peso: "+ds.child("peso").getValue().toString() + " kg");
-                            registro.setImc("IMC: "+ ds.child("imc").getValue().toString());
+                            registro.setAltura(getResources().getString(R.string.su_altura)  +" "+ ds.child("altura").getValue().toString() +" "+ getResources().getString(R.string.metros));
+                            registro.setPeso(getResources().getString(R.string.su_peso) +" "+ds.child("peso").getValue().toString()  +" "+ getResources().getString(R.string.kg));
+                            registro.setImc(getResources().getString(R.string.su_imc_es) +" "+ ds.child("imc").getValue().toString());
                             registro.setCategoria(ds.child("categoria").getValue().toString());
                             listaRegistro.add(registro);
                         }

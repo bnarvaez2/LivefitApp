@@ -70,31 +70,35 @@ public class Signup extends AppCompatActivity {
         correo = emailTV.getText().toString();
         password = passwordTV.getText().toString();
         if(!correo.isEmpty() && !password.isEmpty() && !nombre.isEmpty()) {
-            usuario = new Usuario(nombre,correo,password);
-            mAuth.createUserWithEmailAndPassword(correo, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    if(task.isSuccessful()){
-                        String id = mAuth.getCurrentUser().getUid();
-                        user.child("register").child(usuario.getCorreo().replace('.','|')).setValue(usuario);
-                        Intent intent;
-                        intent = new Intent(Signup.this, MainActivity.class);
-                        intent.putExtra(EXTRA_EMAIL, correo);
-                        intent.putExtra(EXTRA_NOMBRE,correo);
-                        startActivity(intent);
-                        Toast.makeText(getApplicationContext(),"Registro exitoso",Toast.LENGTH_SHORT).show();
-                        finish();
-                    }else{
-                        if(correo.contains(" ")){
-                            Toast.makeText(getApplicationContext(),"No se permiten espacios en el correo.",Toast.LENGTH_SHORT).show();
+            if (password.length()>5) {
+                usuario = new Usuario(nombre,correo,password);
+                mAuth.createUserWithEmailAndPassword(correo, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                            String id = mAuth.getCurrentUser().getUid();
+                            user.child("register").child(usuario.getCorreo().replace('.','|')).setValue(usuario);
+                            Intent intent;
+                            intent = new Intent(Signup.this, MainActivity.class);
+                            intent.putExtra(EXTRA_EMAIL, correo);
+                            intent.putExtra(EXTRA_NOMBRE,correo);
+                            startActivity(intent);
+                            Toast.makeText(getApplicationContext(),getResources().getString(R.string.registro_exitoso),Toast.LENGTH_SHORT).show();
+                            finish();
                         }else{
-                            Toast.makeText(getApplicationContext(),"Este correo no está disponible.",Toast.LENGTH_SHORT).show();
+                            if(correo.contains(" ")){
+                                Toast.makeText(getApplicationContext(),getResources().getString(R.string.correo_invalido),Toast.LENGTH_SHORT).show();
+                            }else{
+                                Toast.makeText(getApplicationContext(),getResources().getString(R.string.correo_no_disponible),Toast.LENGTH_SHORT).show();
+                            }
                         }
                     }
-                }
-            });
+                });
+            }else{
+                Toast.makeText(getApplicationContext(),getResources().getString(R.string.tamaño_de_password),Toast.LENGTH_SHORT).show();
+            }
         }else{
-            Toast.makeText(this, "Asegurese de llenar todos los campos.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getResources().getString(R.string.campos_vacios), Toast.LENGTH_SHORT).show();
         }
     }
 }

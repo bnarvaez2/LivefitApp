@@ -19,6 +19,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Locale;
+
 public class login extends AppCompatActivity {
 
     String email;
@@ -28,7 +30,6 @@ public class login extends AppCompatActivity {
     private EditText txtEmail;
     private EditText txtPassword;
     private Button button;
-    private Button btnRegistrarse;
 
     public static final String EXTRA_EMAIL = "com.example.android.LivefitApp.extra.EMAIL";
 
@@ -68,12 +69,12 @@ public class login extends AppCompatActivity {
                         startActivity(intent);
                         finish();
                     }else{
-                        Toast.makeText(getApplicationContext(), "Correo o contraseña incorrecta.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), getResources().getString(R.string.correo_o_contrasenia_incorrecta), Toast.LENGTH_SHORT).show();
                     }
                 }
             });
         }else {
-            Toast.makeText(getApplicationContext(), "Llene todos los capos.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),getResources().getString(R.string.campos_vacios), Toast.LENGTH_SHORT).show();
         }
     }
     @Override

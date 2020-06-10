@@ -7,8 +7,8 @@
     <string name="altura_m">Altura (m)</string>
     <string name="peso_kg">Peso (Kg)</string>
     <string name="desarrollado_por_braa_company">Desarrollado por BRAA-company</string>
-    <string name="su_imc_es">IMC</string>
-    <string name="imc">IMC</string>
+    <string name="su_imc_es" translatable="false">IMC:</string>
+    <string name="imc" translatable="false">IMC</string>
     <string name="categoria">Categoria</string>
     <string name="su_categoria">Categoria:</string>
     <string name="su_altura">Altura:</string>
@@ -17,11 +17,11 @@
     <string name="sobrepeso">Sobrepeso</string>
     <string name="bajo_peso">Bajo peso</string>
     <string name="obeso">Obeso</string>
-    <string name="normal">Normal</string>
-    <string name="sobrepesoM">25.0—29.9</string>
+    <string name="normal" translatable="false">Normal</string>
+    <string name="sobrepesoM" translatable="false">25.0—29.9</string>
     <string name="bajo_pesoM"> menor a 18.5"</string>
     <string name="obesoM"> mayor a 29.9</string>
-    <string name="normalM">18.5—24.9</string>
+    <string name="normalM" translatable="false">18.5—24.9</string>
 
     <string name="resultado">Resultado</string>
     <string name="dia">dia</string>
@@ -29,7 +29,7 @@
     <string name="a_o">año</string>
     <string name="email">Email</string>
     <string name="ingresar">Ingresar</string>
-    <string name="Ingrese_su_email_example">Ingrese su email (Example@example)</string>
+    <string name="Ingrese_su_email_example" translatable="false">Ingrese su email (Example@example)</string>
     <string name="contrase_a">Contraseña</string>
     <string name="registrarse">Registrarse</string>
     <string name="nombre">Nombre</string>
@@ -39,13 +39,13 @@
     <string name="Bienvenido">Bienvenido!</string>
     <string name="enjoy">Disfruta nuestra \napp</string>
 
-    <string name="Terminos_Seguridad">By tapping \'\'Continue\'\', you agree to our <u>Terms of Service. \n Privacy Polity</u>, and Cookie Polity.</string>
+    <string name="Terminos_Seguridad" translatable="false">By tapping \'\'Continue\'\', you agree to our <u>Terms of Service. \n Privacy Polity</u>, and Cookie Polity.</string>
     <string name="ey_continua_con_el_registro">Ey! Continua con el registro</string>
-    <string name="logo">logo</string>
-    <string name="signout">signOut</string>
+    <string name="logo" translatable="false">logo</string>
+    <string name="signout" translatable="false">signOut</string>
     <string name="digite_altura">Digite su altura</string>
     <string name="digite_peso">Digite su peso</string>
-    <string name="brocolilogo">brocolilogo</string>
+    <string name="brocolilogo" translatable="false">brocolilogo</string>
     <string name="ahora_es_el_momento_perfecto_para_ponerse_en_forma">¡Ahora es el momento perfecto para ponerse en forma!</string>
     <string name="metros">metros</string>
     <string name="kg">kg</string>
@@ -57,5 +57,15 @@
     <string name="subir_de_peso">Subir de peso</string>
     <string name="saludable">Saludable</string>
     <string name="recomendacion">Recomendacion</string>
+
+    <!-- Mensajes Toast -->
+    <string name="correo_o_contrasenia_incorrecta">Correo o contraseña incorrecta.</string>
+    <string name="campos_vacios">Asegurese de llenar todos los campos.</string>
+    <string name="tamaño_de_password">La contraseña debe tener mas de 5 caracteres.</string>
+    <string name="correo_no_disponible">Este correo no está disponible.</string>
+    <string name="correo_invalido">No se permiten espacios en el correo.</string>
+    <string name="registro_exitoso">Registro exitoso.</string>
+    <string name="ingrese_un_peso">Ingrese su peso.</string>
+    <string name="ingrese_una_altura">Ingrese su altura.</string>
 
 </resources>

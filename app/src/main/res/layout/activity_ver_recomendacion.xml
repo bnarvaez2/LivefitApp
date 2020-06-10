@@ -9,13 +9,12 @@
 
     <ImageButton
         android:id="@+id/btnBack"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginStart="5dp"
-        android:background="@color/invisible"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@drawable/ic_botones"
         android:contentDescription="@string/volver"
         android:foreground="?attr/selectableItemBackgroundBorderless"
-        android:scaleType="fitCenter"
+        android:scaleType="fitXY"
         android:tint="@color/colorNegro"
         app:layout_constraintBottom_toTopOf="@+id/divider2"
         app:layout_constraintStart_toStartOf="parent"
