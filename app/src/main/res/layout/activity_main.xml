@@ -5,8 +5,24 @@
     android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo"
+    android:background="@color/colorAccent"
     tools:context=".MainActivity">
+
+    <ImageView
+    android:id="@+id/img_logo_background"
+    android:layout_width="240dp"
+    android:layout_height="505dp"
+    android:alpha="0.15"
+    android:contentDescription="@string/logo"
+    android:focusableInTouchMode="false"
+    android:isScrollContainer="false"
+    android:keepScreenOn="false"
+    app:layout_constraintBottom_toTopOf="@+id/view"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/fondo" />
+
 
     <EditText
         android:id="@+id/txtAltura"
@@ -145,7 +161,7 @@
         android:layout_width="26dp"
         android:layout_height="27dp"
         android:clickable="true"
-        android:drawableEnd="@drawable/signout16x16"
+        android:drawableEnd="@drawable/ic_logout"
         android:focusable="true"
         app:layout_constraintBottom_toTopOf="@+id/txtLivefitApp"
         app:layout_constraintEnd_toEndOf="parent"

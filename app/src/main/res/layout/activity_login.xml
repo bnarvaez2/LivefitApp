@@ -4,8 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo"
+    android:background="#FFFFFF"
     tools:context=".login">
+
+    <ImageView
+        android:id="@+id/img_logo_background"
+        android:layout_width="240dp"
+        android:layout_height="505dp"
+        android:alpha="0.15"
+        android:contentDescription="@string/logo"
+        android:focusableInTouchMode="false"
+        android:isScrollContainer="false"
+        android:keepScreenOn="false"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fondo" />
 
     <TextView
         android:id="@+id/lblEmail"
@@ -27,7 +42,7 @@
         android:layout_marginTop="3dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/bordes_redondos_edit_text"
-        android:drawableEnd="@drawable/userlogo"
+        android:drawableEnd="@drawable/ic_email"
         android:fontFamily="@font/roboto_light"
         android:gravity="center"
         android:hint="@string/ingrese_su_email"
@@ -74,7 +89,7 @@
         android:layout_height="@dimen/alto_edit_text"
         android:layout_marginTop="3dp"
         android:background="@drawable/bordes_redondos_edit_text"
-        android:drawableEnd="@drawable/logolock24x24"
+        android:drawableEnd="@drawable/ic_lock"
         android:fontFamily="@font/roboto_light"
         android:gravity="center"
         android:hint="@string/ingrese_su_contrase_a"

@@ -128,7 +128,7 @@ public class Resultado extends AppCompatActivity {
                         list.add(ob);
                     }
                 }
-                int num= (int) (Math.random()*list.size())-1;
+                int num= (int) (Math.random()*list.size());
                 mostrarRecomendacion(num);
             }
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo">
+    android:background="@color/colorAccent">
 
     <ImageButton
         android:id="@+id/btnBack"
@@ -191,7 +191,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" >
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <TextView
             android:id="@+id/lblRecomendacionR"
@@ -216,7 +216,7 @@
             android:layout_height="90dp"
             android:layout_marginTop="10dp"
             android:contentDescription="@string/recomendacion"
-            app:srcCompat="@drawable/locklogo" />
+            app:srcCompat="@drawable/ic_lock" />
 
         <TextView
             android:id="@+id/lblDscrpcnRcmndR"
@@ -245,8 +245,8 @@
         android:layout_height="55dp"
         android:background="@drawable/ic_botones"
         android:foreground="?attr/selectableItemBackgroundBorderless"
-        android:scaleType="fitXY"
         android:onClick="verHistorial"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toTopOf="@+id/divider"
         app:layout_constraintEnd_toEndOf="@+id/lblResultado"
         app:layout_constraintTop_toTopOf="parent"

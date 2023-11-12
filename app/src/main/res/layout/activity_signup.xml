@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo"
+    android:background="@color/colorAccent"
     tools:context=".Signup">
 
     <ImageButton
@@ -81,7 +81,7 @@
         android:layout_marginEnd="30dp"
         android:autofillHints=""
         android:background="@drawable/bordes_redondos_edit_text"
-        android:drawableEnd="@drawable/userlogo"
+        android:drawableEnd="@drawable/ic_user_logo"
         android:fontFamily="@font/roboto_light"
         android:gravity="center"
         android:hint="@string/ingrese_su_nombre"
@@ -100,7 +100,7 @@
         android:layout_marginTop="3dp"
         android:autofillHints=""
         android:background="@drawable/bordes_redondos_edit_text"
-        android:drawableEnd="@drawable/logolock24x24"
+        android:drawableEnd="@drawable/ic_lock"
         android:ems="10"
         android:fontFamily="@font/roboto_light"
         android:gravity="center"
@@ -120,7 +120,7 @@
         android:layout_marginTop="3dp"
         android:autofillHints=""
         android:background="@drawable/bordes_redondos_edit_text"
-        android:drawableEnd="@drawable/userlogo"
+        android:drawableEnd="@drawable/ic_email"
         android:ems="10"
         android:fontFamily="@font/roboto_light"
         android:gravity="center"
@@ -159,7 +159,7 @@
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logoapp" />
+        app:srcCompat="@drawable/fondo" />
 
     <View
         android:id="@+id/view"

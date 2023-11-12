@@ -37,9 +37,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Intent intent = getIntent();
 
-        constraintLayout = findViewById(R.id.mainLayout);
-        constraintLayout.setBackground(getResources().getDrawable(R.drawable.fondo));
-
         if(!login.EXTRA_EMAIL.isEmpty()){
             user = intent.getStringExtra(login.EXTRA_EMAIL);
         }
